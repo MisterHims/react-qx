@@ -1,0 +1,27 @@
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    border-color: rgba(var(--primary-color-dark), .1);
+    border-top-width: 1px;
+    p {
+        color: rgba(var(--primary-color-400), 1);
+    }
+}
+
+.footer-links {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0 4rem 0 5rem;
+}
+
+/* ## Dark Mode ## */
+
+.dark footer {
+    background-color: transparent;
+    border-color: rgba(var(--primary-color-300), 0.6);
+    p {
+        color: rgba(var(--primary-color-500), 1);
+    }
+}
