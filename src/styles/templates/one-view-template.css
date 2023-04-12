@@ -51,27 +51,11 @@ du component OneViewTemplates.tsx qui est composé de :
 .home-content .content h1 {
   font-weight: 800;
   letter-spacing: -0.025em;
-  color: rgb(15 23 42);
-  color: rgba(var(--primary-color-dark), 1);
 }
 
 .home-content .content p {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  /* color: rgb(71 85 105); */
-  color: rgba(var(--primary-color-600), 1);
-}
-
-/* ## Dark Mode ## */
-
-.dark .home-content .content h1 {
-  /* color: rgb(255 255 255); */
-  color: rgba(var(--primary-color-light), 1);
-}
-
-.dark .home-content .content p {
-  /* color: rgb(148 163 184); */
-  color: rgba(var(--primary-color-800), 1);
 }
 
 /* ### TS PARTICLES BACKGROUND ### */
@@ -85,8 +69,10 @@ du component OneViewTemplates.tsx qui est composé de :
   opacity: 0.15;
 }
 
-/* ## Dark Mode ## */
+@media (prefers-color-scheme: dark) {
 
-.dark #tsparticles {
-  opacity: 1;
+  #tsparticles {
+    opacity: 0.8;
+  }
+
 }

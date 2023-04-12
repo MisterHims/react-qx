@@ -1,4 +1,83 @@
-html {
+:root {
+
+    /* QxBlue - Tonic */
+
+    --QxBlue-50: 240, 249, 255;
+    --QxBlue-100: 224, 242, 253;
+    --QxBlue-200: 186, 230, 253;
+    --QxBlue-300: 125, 211, 252;
+    --QxBlue-400: 56, 189, 248;
+    --QxBlue-500: 14, 165, 233;
+    --QxBlue-600: 2, 132, 199;
+    --QxBlue-700: 3, 105, 161;
+    --QxBlue-800: 7, 89, 133;
+    --QxBlue-900: 12, 74, 110;
+    --QxBlue-950: 8, 47, 73;
+
+    /* QxSlate - Primary 1 */
+
+    --QxSlate-50: 248, 250, 252;
+    --QxSlate-100: 241, 245, 249;
+    --QxSlate-200: 241, 232, 240;
+    --QxSlate-300: 203, 213, 225;
+    --QxSlate-400: 148, 163, 184;
+    --QxSlate-500: 100, 116, 139;
+    --QxSlate-600: 71, 85, 105;
+    --QxSlate-700: 51, 65, 85;
+    --QxSlate-800: 30, 41, 59;
+    --QxSlate-900: 15, 23, 42;
+    --QxSlate-950: 2, 6, 23;
+
+    /* QxGray - Primary 2 */
+
+    --QxGray-50: 249, 250, 251;
+    --QxGray-100: 243, 244, 246;
+    --QxGray-200: 229, 231, 235;
+    --QxGray-300: 209, 213, 219;
+    --QxGray-400: 156, 163, 175;
+    --QxGray-500: 107, 114, 128;
+    --QxGray-600: 75, 85, 99;
+    --QxGray-700: 55, 65, 81;
+    --QxGray-800: 31, 41, 55;
+    --QxGray-900: 17, 24, 39;
+    --QxGray-950: 3, 7, 18;
+
+    /* Neutral - B&W and shades of grey */
+    --QxNeutral-0: 255, 255, 255;
+    --QxNeutral-50: 248, 248, 248;
+    --QxNeutral-100: 235, 235, 235;
+    --QxNeutral-150: 221, 221, 221;
+    --QxNeutral-200: 208, 208, 208;
+    --QxNeutral-250: 195, 195, 195;
+    --QxNeutral-300: 181, 181, 181;
+    --QxNeutral-350: 168, 168, 168;
+    --QxNeutral-400: 154, 154, 154;
+    --QxNeutral-450: 141, 141, 141;
+    --QxNeutral-500: 128, 128, 128;
+    --QxNeutral-550: 114, 114, 114;
+    --QxNeutral-600: 101, 101, 101;
+    --QxNeutral-650: 87, 87, 87;
+    --QxNeutral-700: 74, 74, 74;
+    --QxNeutral-750: 60, 60, 60;
+    --QxNeutral-800: 47, 47, 47;
+    --QxNeutral-850: 34, 34, 34;
+    --QxNeutral-900: 20, 20, 20;
+    --QxNeutral-950: 7, 7, 7;
+    --QxNeutral-1000: 0, 0, 0;
+
+
+    /* Primary Colors - Global Theme (Light) */
+    --primary-color-light: 249, 254, 255;
+    --primary-color-200: 220, 226, 253;
+    --primary-color-300: 192, 198, 224;
+    --primary-color-400: 165, 171, 187;
+    --primary-color-500: 139, 144, 169;
+    --primary-color-600: 113, 118, 143;
+    --primary-color-700: 88, 94, 117;
+    --primary-color-800: 65, 70, 92;
+    --primary-color-900: 45, 45, 81;
+    --primary-color-dark: 21, 27, 46;
+
     /* Primary Colors - Global Theme (Light) */
 
     --primary-color-light: 249, 254, 255;
@@ -12,40 +91,7 @@ html {
     --primary-color-900: 45, 45, 81;
     --primary-color-dark: 21, 27, 46;
 
-}
-
-html.dark {
-
-    /* Primary Colors - Global Theme (Dark) */
-
-    --primary-color-dark: 21, 27, 46;
-    --primary-color-200: 45, 45, 81;
-    --primary-color-300: 65, 70, 92;
-    --primary-color-400: 88, 94, 117;
-    --primary-color-500: 113, 118, 143;
-    --primary-color-600: 139, 144, 169;
-    --primary-color-700: 165, 171, 187;
-    --primary-color-800: 192, 198, 224;
-    --primary-color-900: 220, 226, 253;
-    --primary-color-light: 249, 254, 255;
-
-}
-
-html {
-
-    /* Tonic Colors - Blue */
-
-    --blue-color-100: 125, 244, 255;
-    --blue-color-200: 106, 227, 255;
-    --blue-color-300: 88, 213, 255;
-    --blue-color-400: 69, 199, 255;
-    --blue-color-500: 47, 185, 243;
-    --blue-color-600: 8, 171, 229;
-    --blue-color-700: 0, 158, 215;
-    --blue-color-800: 0, 145, 201;
-    --blue-color-900: 0, 130, 185;
-
-    /* Complementary Colors - Pink */
+       /* Complementary Colors - Pink */
 
     --pink-color-100: 255, 147, 218;
     --pink-color-200: 255, 130, 206;
@@ -57,37 +103,23 @@ html {
     --pink-color-800: 158, 0, 56;
     --pink-color-900: 148, 0, 47;
 
-    /* Shades of Gray - Exceptions Only */
-
-    --shade-color-50: 248, 248, 248;
-    --shade-color-100: 235, 235, 235;
-    --shade-color-150: 221, 221, 221;
-    --shade-color-200: 208, 208, 208;
-    --shade-color-250: 195, 195, 195;
-    --shade-color-300: 181, 181, 181;
-    --shade-color-350: 168, 168, 168;
-    --shade-color-400: 154, 154, 154;
-    --shade-color-450: 141, 141, 141;
-    --shade-color-500: 128, 128, 128;
-    --shade-color-550: 114, 114, 114;
-    --shade-color-600: 101, 101, 101;
-    --shade-color-650: 87, 87, 87;
-    --shade-color-700: 74, 74, 74;
-    --shade-color-750: 60, 60, 60;
-    --shade-color-800: 47, 47, 47;
-    --shade-color-850: 34, 34, 34;
-    --shade-color-900: 20, 20, 20;
-    --shade-color-950: 7, 7, 7;
-
 }
 
-/* Mouse Color Selection */
-::selection {
-    color: rgba(var(--primary-color-light), 1);
-    background: rgba(var(--blue-color-800), 1);
-}
+@media (prefers-color-scheme: dark) {
+    :root {
 
-::-moz-selection {
-    color: rgba(var(--primary-color-light), 1);
-    background: rgba(var(--blue-color-800), 1);
+        /* Primary Colors - Global Theme (Dark) */
+
+        --primary-color-dark: 21, 27, 46;
+        --primary-color-200: 45, 45, 81;
+        --primary-color-300: 65, 70, 92;
+        --primary-color-400: 88, 94, 117;
+        --primary-color-500: 113, 118, 143;
+        --primary-color-600: 139, 144, 169;
+        --primary-color-700: 165, 171, 187;
+        --primary-color-800: 192, 198, 224;
+        --primary-color-900: 220, 226, 253;
+        --primary-color-light: 249, 254, 255;
+
+    }
 }

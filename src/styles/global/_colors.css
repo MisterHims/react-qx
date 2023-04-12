@@ -1,0 +1,84 @@
+html {
+    /* Primary Colors - Global Theme (Light) */
+
+    --primary-color-light: rgb(249, 254, 255);
+    --primary-color-200: rgb(220, 226, 253);
+    --primary-color-300: rgb(192, 198, 224);
+    --primary-color-400: rgb(165, 171, 187);
+    --primary-color-500: rgb(139, 144, 169);
+    --primary-color-600: rgb(113, 118, 143);
+    --primary-color-700: rgb(88, 94, 117);
+    --primary-color-800: rgb(65, 70, 92);
+    --primary-color-900: rgb(45, 45, 81);
+    --primary-color-dark: rgb(21, 27, 46);
+
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+
+        /* Primary Colors - Global Theme (Dark) */
+
+        --primary-color-dark: rgb(21, 27, 46);
+        --primary-color-200: rgb(45, 45, 81);
+        --primary-color-300: rgb(65, 70, 92);
+        --primary-color-400: rgb(88, 94, 117);
+        --primary-color-500: rgb(113, 118, 143);
+        --primary-color-600: rgb(139, 144, 169);
+        --primary-color-700: rgb(165, 171, 187);
+        --primary-color-800: rgb(192, 198, 224);
+        --primary-color-900: rgb(220, 226, 253);
+        --primary-color-light: rgb(249, 254, 255);
+
+    }
+}
+
+html {
+
+    /* Tonic Colors - Blue */
+
+    --blue-color-100: rgb(125, 244, 255);
+    --blue-color-200: rgb(106, 227, 255);
+    --blue-color-300: rgb(88, 213, 255);
+    --blue-color-400: rgb(69, 199, 255);
+    --blue-color-500: rgb(47, 185, 243);
+    --blue-color-600: rgb(8, 171, 229);
+    --blue-color-700: rgb(0, 158, 215);
+    --blue-color-800: rgb(0, 145, 201);
+    --blue-color-900: rgb(0, 130, 185);
+
+    /* Complementary Colors - Pink */
+
+    --pink-color-100: rgb(255, 147, 218);
+    --pink-color-200: rgb(255, 130, 206);
+    --pink-color-300: rgb(255, 98, 178);
+    --pink-color-400: rgb(255, 61, 152);
+    --pink-color-500: rgb(254, 0, 127);
+    --pink-color-600: rgb(211, 0, 94);
+    --pink-color-700: rgb(190, 0, 78);
+    --pink-color-800: rgb(158, 0, 56);
+    --pink-color-900: rgb(148, 0, 47);
+
+    /* Shades of Gray - Exceptions Only */
+
+    --shade-color-50: rgb(248, 248, 248);
+    --shade-color-100: rgb(235, 235, 235);
+    --shade-color-150: rgb(221, 221, 221);
+    --shade-color-200: rgb(208, 208, 208);
+    --shade-color-250: rgb(195, 195, 195);
+    --shade-color-300: rgb(181, 181, 181);
+    --shade-color-350: rgb(168, 168, 168);
+    --shade-color-400: rgb(154, 154, 154);
+    --shade-color-450: rgb(141, 141, 141);
+    --shade-color-500: rgb(128, 128, 128);
+    --shade-color-550: rgb(114, 114, 114);
+    --shade-color-600: rgb(101, 101, 101);
+    --shade-color-650: rgb(87, 87, 87);
+    --shade-color-700: rgb(74, 74, 74);
+    --shade-color-750: rgb(60, 60, 60);
+    --shade-color-800: rgb(47, 47, 47);
+    --shade-color-850: rgb(34, 34, 34);
+    --shade-color-900: rgb(20, 20, 20);
+    --shade-color-950: rgb(7, 7, 7);
+
+}

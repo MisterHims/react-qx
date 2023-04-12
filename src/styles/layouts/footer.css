@@ -17,11 +17,12 @@ footer {
 }
 
 /* ## Dark Mode ## */
-
-.dark footer {
-    background-color: transparent;
-    border-color: rgba(var(--primary-color-300), 0.6);
-    p {
-        color: rgba(var(--primary-color-500), 1);
+.dark {
+    footer {
+        background-color: transparent;
+        border-color: rgba(var(--primary-color-300), 0.6);
+        p {
+            color: rgba(var(--primary-color-500), 1);
+        }
     }
 }

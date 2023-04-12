@@ -46,10 +46,15 @@ button, select {
     width: 1px;
 }
 
-.dark .dark\:inline {
-    display: inline;
-}
+@media (prefers-color-scheme: dark) {
 
-.dark .dark\:hidden {
-    display: none;
+    /* Seulement si utilise le ReactDarkModeButton
+    .dark\:hidden {
+        display: none;
+    }
+    .dark\:inline {
+        display: inline;
+    }
+    */
+
 }

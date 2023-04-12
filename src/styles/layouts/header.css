@@ -9,7 +9,6 @@ header .header-wrapper {
     z-index: 40;
     top: 0;
     position: sticky;
-    --tw-backdrop-blur: blur(8px);
 }
 
 header .header-wrapper.template-home {
@@ -22,8 +21,7 @@ header .header-wrapper.template-home {
 }
 
 header .header-wrapper.template-article {
-    border-color: rgba(var(--primary-color-dark), .1);
-    border-bottom-width: 1px;
+    border-bottom: 1px solid rgba(var(--QxSlate-50), .06);
 
     .header-content {
         max-width: 90rem;
@@ -31,6 +29,12 @@ header .header-wrapper.template-article {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* Logotype */
+
+header .header-items .header-bar-logotype svg.logo {
+    color: rgba(var(--QxSlate-950), 1)
 }
 
 /* Header Items */
@@ -145,7 +149,7 @@ header .header-items .header-quick-access {
     a.github-button {
         display: block;
         margin-left: 1.5rem;
-        color: rgba(var(--primary-color-700), 1);
+        color: rgba(var(--QxSlate-400), 1);
     }
     a.github-button svg {
         display: inline-block;
@@ -153,7 +157,7 @@ header .header-items .header-quick-access {
         height: 1.25rem;
     }
     a.github-button:hover {
-        color: rgba(var(--primary-color-500), 1);
+        color: rgba(var(--QxSlate-500), 1);
     }
     nav ul {
         display: flex;
@@ -192,70 +196,71 @@ header .header-background {
     }
 }
 
-/* ## Dark Mode ## */
-
-.dark .header-background div {
-    img.light-version {
-        display: none;
-    }
-    img.dark-version {
-        display: block;
-    }
-}
-
-.dark header .header-wrapper {
-    background-color: transparent;
-    border-color: rgba(var(--primary-color-300), .6);
-    border-bottom-width: 1px;
-}
-
-.dark header .header-wrapper.full-size {
-    width: 100%;
-    border: none;
-}
-
-.dark header .header-items .header-bar-logotype svg.logo {
-    color: rgba(var(--primary-color-light), 1)
-}
-
-.dark header .header-items .header-bar-notification {
-    color: rgba(var(--blue-color-500), 1);
-    svg {
-        color: rgba(var(--blue-color-300), 1);
-    }
-}
-
-.dark header .header-items .header-quick-access {
-        button.mode-switch span svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        path.path-one {
-            fill: rgba(56,189,248,.2);
-            stroke: none;
+/* #### Dark Theme #### */
+.dark {
+    .header-background div {
+        img.light-version {
+            display: none;
         }
-        path.path-two {
-            fill: #0ea5e9;
-            stroke: none;
-        }
-        path.path-three {
-            fill: #0ea5e9;
-            stroke: none;
+        img.dark-version {
+            display: block;
         }
     }
-}
 
-.dark header .header-items .header-quick-access {
-    a {
-        color: rgba(var(--primary-color-light), 1);
-    }
-    a:hover {
-        color: rgba(var(--blue-color-500), 1);
-    }
-    .header-tools {
+    header .header-wrapper {
+        background-color: transparent;
         border-color: rgba(var(--primary-color-300), .6);
+        border-bottom-width: 1px;
     }
-    a.github-button:hover {
-        color: rgba(var(--primary-color-800), 1);
+
+    header .header-wrapper.full-size {
+        width: 100%;
+        border: none;
+    }
+
+    header .header-items .header-bar-logotype svg.logo {
+        color: rgba(var(--QxNeutral-0), 1)
+    }
+
+    header .header-items .header-bar-notification {
+        color: rgba(var(--blue-color-500), 1);
+        svg {
+            color: rgba(var(--blue-color-300), 1);
+        }
+    }
+
+    header .header-items .header-quick-access {
+            button.mode-switch span svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            path.path-one {
+                fill: rgba(56,189,248,.2);
+                stroke: none;
+            }
+            path.path-two {
+                fill: #0ea5e9;
+                stroke: none;
+            }
+            path.path-three {
+                fill: #0ea5e9;
+                stroke: none;
+            }
+        }
+    }
+
+    header .header-items .header-quick-access {
+        a {
+            color: rgba(var(--primary-color-light), 1);
+        }
+        a:hover {
+            color: rgba(var(--blue-color-500), 1);
+        }
+        .header-tools {
+            border-color: rgba(var(--primary-color-300), .6);
+        }
+        a.github-button:hover {
+            color: rgba(var(--QxSlate-400), 1);
+        }
     }
 }
 

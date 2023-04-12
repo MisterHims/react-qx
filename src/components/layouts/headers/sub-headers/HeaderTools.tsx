@@ -1,11 +1,10 @@
-import ReactDarkModeButton from "../../../utils/icon-button/ReactDarkModeButton";
+import MuiDarkClassButton from "../../../utils/icon-button/MuiDarkClassButton";
 import GitHubButton from "../../../utils/icon-button/GitHubButton";
-import MuiDarkModeButton from "../../../utils/icon-button/MuiDarkModeButton";
 
 const HeaderTools = () => {
   return (
     <div className="header-tools">
-      <MuiDarkModeButton />
+      <MuiDarkClassButton />
       <GitHubButton />
     </div>
   );

@@ -1,21 +1,21 @@
 import SearchBar from "../search/SearchBar";
 import SidebarTopLinks from "./SidebarTopLinks";
-import { SideBarDocsLinks } from "./SideBarLinks";
+import { SideBarExercicesLinks } from "./SideBarLinks";
 
-import "../../../../build/styles/layouts/sidebar.css";
+import "../../../../../build/styles/layouts/sidebar.css";
 
-const MainSideBarDocs = () => {
+const MainSidebarExercices = () => {
   return (
     <div className="sidebar flex">
       <nav id="nav" className="sidebar-container lg:text-sm lg:leading-6">
         <div className="sidebar-content">
           <SearchBar />
           <SidebarTopLinks />
-          <SideBarDocsLinks />
+          <SideBarExercicesLinks />
         </div>
       </nav>
     </div>
   );
 };
 
-export default MainSideBarDocs;
+export default MainSidebarExercices;
