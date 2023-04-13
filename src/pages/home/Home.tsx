@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Box, Button, Typography } from '@mui/material';
-import QxButton from '../../components/utils/buttons/QxButton';
+import QxButton from '../../components/elements/utils/buttons/QxButton';
 
 const Home = () => {
   return (

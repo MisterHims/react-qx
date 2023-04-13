@@ -1,5 +1,5 @@
-import MuiDarkClassButton from "../../../utils/icon-button/MuiDarkClassButton";
-import GitHubButton from "../../../utils/icon-button/GitHubButton";
+import MuiDarkClassButton from "../../../elements/utils/icon-button/MuiDarkClassButton";
+import GitHubButton from "../../../elements/utils/icon-button/GitHubButton";
 
 const HeaderTools = () => {
   return (

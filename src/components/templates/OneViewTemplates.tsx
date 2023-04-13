@@ -4,7 +4,7 @@ import { HomeContent } from "../layouts/contents/Content";
 import Footer from "../layouts/footers/Footer";
 
 // Import Animated Background
-import ParticlesBackground from "../utils/backgrounds/ParticlesBackground";
+import ParticlesBackground from "../elements/utils/backgrounds/ParticlesBackground";
 
 // Import Style(s)
 import "../../../build/styles/templates/one-view-template.css";
