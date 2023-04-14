@@ -1,5 +1,5 @@
 import { HeaderBackgroundClassic } from "./sub-headers/HeaderBackgrounds";
-import HeaderLogotype from "./sub-headers/HeaderLogotype";
+import MyReactLogotype from "./sub-headers/MyReactLogotype";
 import HeaderNotificationBar from "./sub-headers/HeaderNotificationBar";
 import HeaderLinks from "./sub-headers/HeaderLinks";
 import HeaderTools from "./sub-headers/HeaderTools";
@@ -16,9 +16,9 @@ const Header = (props: HeaderProps) => {
     <header>
       <HeaderBackgroundClassic />
       <div className={`header-wrapper template-${props.template}`}>
-        <div className="header-content">
-          <div className="header-items">
-            <HeaderLogotype />
+        <div className="header-container">
+          <div className="header-content">
+            <MyReactLogotype />
             {props.showNotificationBar && <HeaderNotificationBar />}
             <div className="header-quick-access">
               <HeaderLinks />
