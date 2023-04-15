@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 const MaterialUI = () => {
   return (
-    <div className="content">MaterialUI</div>
+    <Box component="main" className="content">MaterialUI</Box>
   )
 }
 

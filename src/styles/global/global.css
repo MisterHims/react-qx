@@ -49,16 +49,3 @@ button, select {
     white-space: nowrap;
     width: 1px;
 }
-
-@media (prefers-color-scheme: dark) {
-
-    /* Seulement si utilise le ReactDarkModeButton
-    .dark\:hidden {
-        display: none;
-    }
-    .dark\:inline {
-        display: inline;
-    }
-    */
-
-}

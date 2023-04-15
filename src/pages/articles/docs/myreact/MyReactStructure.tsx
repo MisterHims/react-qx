@@ -1,9 +1,9 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { List, ListItem, ListItemText } from '@mui/material';
 
 const MyReactStructure = () => {
   return (
-    <div className='content'>
+    <Box component="main" className="content">
         <Typography variant='h1'>Structure générale</Typography>
         <Typography variant='h2'>Structure des Composants</Typography>
         <Typography variant='body1' component='div'>
@@ -80,7 +80,7 @@ const MyReactStructure = () => {
                 <ListItemText primary="Item 3" />
             </ListItem>
         </List>
-    </div>
+    </Box>
   )
 }
 

@@ -1,10 +1,14 @@
+import { Box, Typography } from "@mui/material"
+
 const PostCSSPresentation = () => {
   return (
-    <div className="content">
+    <Box component="main" className="content">
+      <Typography variant='body1'>
       PostCSS ne fait pas que transpiler le code CSS comme le fait Babel mais
       il le rend également entièrement fonctionnel sur les vieux navigateurs
       ou basés sur d'autres plugins que l'on souhaiterait installer.
-    </div>
+      </Typography>
+    </Box>
   )
 }
 

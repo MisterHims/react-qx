@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 const MaterialUITypography = () => {
   return (
-    <div className="content">
+    <Box component="main" className="content">
         <Typography variant="body1">Voici les 6 variantes de titres par défaut fourni avec Material UI :</Typography>
         <Typography variant="h1"> H1 Heading </Typography>
         <Typography variant="h2"> H2 Heading </Typography>
@@ -16,7 +16,7 @@ const MaterialUITypography = () => {
         <Typography variant="body1" style={{ backgroundColor: '#686868' }}> Deux variantes de paragraphe : </Typography>
         <Typography variant="body1"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut deserunt fuga debitis excepturi ab sunt quam ipsa provident, odio, ratione facilis sapiente iusto dolores quo dignissimos quisquam! Earum, quae animi. </Typography>
         <Typography variant="body2"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid laudantium fugit nostrum a accusantium, voluptas soluta esse quos qui, adipisci eius maiores dignissimos quia ratione beatae modi ea! Asperiores. </Typography>
-    </div>
+    </Box>
   )
 }
 

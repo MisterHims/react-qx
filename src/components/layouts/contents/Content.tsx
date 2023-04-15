@@ -5,9 +5,9 @@ type Props = {
   children: ReactNode;
 };
 
-const HomeContent = ({ children }: Props) => {
+const FullContent = ({ children }: Props) => {
   return (
-    <article className="home-content flex flex-col grow justify-center text-center">
+    <article className="full-content flex flex-col grow justify-center text-center">
       {children}
     </article>
   );
@@ -22,4 +22,4 @@ const ArticleContent = ({ children }: Props) => {
   );
 };
 
-export { HomeContent, ArticleContent }
+export { FullContent, ArticleContent }

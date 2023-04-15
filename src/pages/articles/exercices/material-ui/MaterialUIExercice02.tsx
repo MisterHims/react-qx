@@ -1,14 +1,15 @@
 import SubMenuExercices from "./_assets/SubMenuExercices";
 import SubMenuTailwindCSS from "./_assets/SubMenuTailwindCSS";
 import SubMenuFlowbite from "./_assets/SubMenuFlowbite"
+import { Box } from "@mui/material";
 
 const MaterialUIExercice02 = () => {
   return (
-    <div className="content">
+    <Box component="main" className="content">
       <SubMenuExercices />
       <SubMenuTailwindCSS />
       <SubMenuFlowbite />
-    </div>
+    </Box>
   )
 }
 

@@ -1,10 +1,10 @@
-import MuiDarkClassButton from "../../../elements/utils/icon-button/MuiDarkClassButton";
+import MuiExtendThemeSwitchModeButton from "../../../elements/utils/icon-button/MuiExtendThemeSwitchModeButton";
 import GitHubButton from "../../../elements/utils/icon-button/GitHubButton";
 
 const HeaderTools = () => {
   return (
     <div className="header-tools">
-      <MuiDarkClassButton />
+      <MuiExtendThemeSwitchModeButton />
       <GitHubButton />
     </div>
   );

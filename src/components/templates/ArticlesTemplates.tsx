@@ -15,7 +15,7 @@ const DocsTemplate = ({ children }: Props) => {
   return (
   <div className="article-wrapper">
     <Header template="article" showNotificationBar={true}/>
-    <div className="article-container flex flex-row justify-center flex-nowrap">
+    <div className="article-container">
       <MainSidebarDocs />
       <ArticleContent>{children}</ArticleContent>
     </div>
@@ -27,7 +27,7 @@ const ExercicesTemplate = ({ children }: Props) => {
   return (
   <div className="article-wrapper">
     <Header template="article" showNotificationBar={true}/>
-    <div className="article-container flex flex-row justify-center flex-nowrap">
+    <div className="article-container">
       <MainSidebarExercices />
       <ArticleContent>{children}</ArticleContent>
     </div>

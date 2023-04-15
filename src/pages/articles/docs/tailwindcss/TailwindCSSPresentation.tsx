@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 const TailwindCSSIntroduction = () => {
   return (
-    <div className="content">Introduction de TailwindCSS</div>
+    <Box component="main" className="content">Introduction de TailwindCSS</Box>
   )
 }
 

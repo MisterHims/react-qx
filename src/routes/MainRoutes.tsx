@@ -6,7 +6,7 @@ import Page404Error from "../pages/errors/Page404Error";
 
 /////////// HOME PAGE \\\\\\\\\\\
 
-import { HomeTemplate } from "../components/templates/OneViewTemplates";
+import { FullTemplate } from "../components/templates/OneViewTemplates";
 import Home from "../pages/home/Home";
 
 /////////// EXERCICES PAGES \\\\\\\\\\\
@@ -52,7 +52,7 @@ import FlowbitePresentation from "../pages/articles/docs/flowbite/FlowbitePresen
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomeTemplate><Home /></HomeTemplate>} />
+      <Route path="/" element={<FullTemplate><Home /></FullTemplate>} />
       <Route path="/exercices" element={<ExercicesTemplate><ExercicesIndex /></ExercicesTemplate>}/>
       <Route path="/exercices/flowbite/exercice-01" element={<ExercicesTemplate><FlowbiteExercice01 /></ExercicesTemplate>}/>
       <Route path="/exercices/material-ui/exercice-01" element={<ExercicesTemplate><MaterialUIExercice01 /></ExercicesTemplate>}/>
@@ -75,7 +75,7 @@ const MainRoutes = () => {
       <Route path="/docs/material-ui/typographie" element={<DocsTemplate><MaterialUITypography /></DocsTemplate>}/>
       <Route path="/docs/tailwindcss/presentation" element={<DocsTemplate><TailwindCSSPresentation /></DocsTemplate>}/>
       <Route path="/docs/flowbite/presentation" element={<DocsTemplate><FlowbitePresentation /></DocsTemplate>}/>
-      <Route path="/*" element={<Page404Error />} />
+      <Route path="/*" element={<FullTemplate><Page404Error /></FullTemplate>} />
     </Routes>
   );
 };

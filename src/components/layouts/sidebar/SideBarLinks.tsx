@@ -130,7 +130,11 @@ const SideBarExercicesLinks = () => {
         <ul>
           <li>
             <NavLink to="/exercices/material-ui/exercice-01"> Exercice n°1 </NavLink>
+          </li>
+          <li>
             <NavLink to="/exercices/material-ui/exercice-02"> Exercice n°2 - React Menu </NavLink>
+          </li>
+          <li>
             <NavLink to="/exercices/material-ui/exercice-03"> Exercice n°3 - Custom CSS </NavLink>
           </li>
         </ul>

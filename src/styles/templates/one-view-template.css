@@ -4,11 +4,10 @@ du component OneViewTemplates.tsx qui est composé de :
    - HomeTemplate
  */
 
-/* ### HOME CONTAINER ### */
+/* ### FULL PAGE ### */
 
-.home-container {
+.full-container {
   width: 100%;
-  /* width: calc(90rem - 4rem); /* 90rem - padding = 90rem (1440px) */
   height: calc(100vh - 4rem);
   margin-left: auto;
   margin-right: auto;
@@ -16,46 +15,31 @@ du component OneViewTemplates.tsx qui est composé de :
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-}
-
-.home-container .home-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  padding: 2rem;
-  max-width: 71.25rem;
-}
-
-/* ### HOME CONTENT ### */
-
-.home-content {
-  width: 50rem /* 800px */;
-}
-
-.home-content .content *:not(:last-child) {
-  margin-bottom: 2.5rem;
-}
-
-.home-content .content {
-  max-width: 71.25rem;
-  margin: 2rem 0;
-}
-
-.home-content .content img {
-  max-width: 350px;
-}
-
-.home-content .content h1 {
-  font-weight: 800;
-  letter-spacing: -0.025em;
-}
-
-.home-content .content p {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  .full-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    width: 64rem;
+    max-width: 71.25rem;
+    .content {
+      margin: 2rem 0;
+      img {
+        max-width: 350px;
+      }
+      h1 {
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+      p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
 }
 
 /* ### TS PARTICLES BACKGROUND ### */
@@ -69,10 +53,14 @@ du component OneViewTemplates.tsx qui est composé de :
   opacity: 0.15;
 }
 
-.dark {
+/********************************************************/
+/********************** DARK THEME *********************/
+/******************************************************/
+
+[data-mui-color-scheme="dark"] {
 
   #tsparticles {
-    opacity: 0.8;
+    opacity: 0.35;
   }
 
 }

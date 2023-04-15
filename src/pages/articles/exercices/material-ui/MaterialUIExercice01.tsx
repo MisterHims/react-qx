@@ -1,8 +1,10 @@
+import { Box, Typography } from "@mui/material";
+
 const MaterialUIExercice01 = () => {
   return (
-    <div className="content">
-      <p>Vous êtes sur ma page d'exercice n°1 concernant Material-UI !</p>
-    </div>
+    <Box component="main" className="content">
+      <Typography variant='body1'>Vous êtes sur ma page d'exercice n°1 concernant Material-UI !</Typography>
+    </Box>
   );
 };
 

@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 const MyReactInstallation = () => {
   return (
-    <div className="content">MyReactInstallation</div>
+    <Box component="main" className="content">MyReactInstallation</Box>
   )
 }
 

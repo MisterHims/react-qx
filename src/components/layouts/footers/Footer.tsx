@@ -1,16 +1,18 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 
 import "../../../../build/styles/layouts/footer.css";
 
 const Footer = () => {
   return (
-    <footer role="contentinfo">
-      <Container className="footer-links">
-        <p>
-          ©2023 myReact - Un projet réalisé avec React TypeScript et Vite
-        </p>
+    <Box component="footer" role="contentinfo">
+      <Container className="footer-links" maxWidth="sm">
+        <Typography variant="body2">
+          {"©"}{new Date().getFullYear()} myReact - Un projet réalisé avec React TypeScript et Vite
+        </Typography>
       </Container>
-    </footer>
+    </Box>
   );
 };
 

@@ -1,8 +1,12 @@
+import { Box, Typography } from "@mui/material"
+
 const FlowbitePresentation = () => {
   return (
-    <div className="content">
-      FlowbitePresentation
-    </div>
+    <Box component="main" className="content">
+      <Typography variant='body1'>
+        FlowbitePresentation
+      </Typography>
+    </Box>
   )
 }
 

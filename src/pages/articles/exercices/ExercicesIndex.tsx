@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 const ExercicesIndex = () => {
   return (
-    <div className="content">ExercicesIndex</div>
+    <Box component="main" className="content">ExercicesIndex</Box>
   )
 }
 

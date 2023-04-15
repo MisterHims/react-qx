@@ -5,107 +5,54 @@ du component ArticlesTemplates.tsx qui est composé de :
    - ExercicesTemplate
  */
 
-/* ### ARTICLE CONTAINER ### */
-
 .article-wrapper {
-    width: 100%;
-}
-
-.article-container {
-    height: 100%;
-    width: 90rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-}
-
-.article-container .article-content {
-    width: calc(100% - 20rem);
-    padding-left: 2rem;
-}
-
-/* ### ARTICLE CONTENT ### */
-
-.article-content a {
-    font-weight: 500;
-    text-decoration: inherit;
-    color: rgba(var(--primary-color-dark), 1);
-}
-
-.article-content a:hover {
-    color: rgba(var(--primary-color-500), 1);
-}
+	width: 100%;
+	.article-container {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		flex-wrap: nowrap;
+		height: 100%;
+		width: 90rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 2rem;
+		.article-content {
+			width: calc(100% - 20rem);
+			padding-left: 2rem;
+			.content {
+				max-width: 71.25rem;
+				margin: 2rem 0;
+				img {
+					max-width: 350px;
+				}
+			}
+		}
+	} /* Fin | Article Container */
+} /* Fin | Article Wrapper */
 
 
-/* ## Dark Mode ## */
-
-.dark .article-content a {
-    color: rgba(var(--primary-color-light), 1);
-}
-
-.dark .article-content a:hover {
-    color: rgba(var(--primary-color-500), 1);
-}
-
-/* ### CONTENT ### */
-
-/*
-.article-content .content *:not(:last-child) {
-    margin-bottom: 1.5rem;
-}
-*/
-
-.article-content .content {
-    max-width: 71.25rem;
-    margin: 2rem 0;
-}
-
-.article-content .content img {
-    max-width: 350px;
-}
-
-.article-content .content h1 {
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    color: rgb(15 23 42);
-    color: rgba(var(--primary-color-dark), 1);
-}
-
-.article-content .content p {
-    /* font-size: 1.125rem; */
-    /* line-height: 1.75rem; */
-    /* color: rgba(var(--primary-color-600), 1); */
-}
-
-/* ## Dark Mode ## */
-
-.dark .article-content .content h1 {
-    color: rgba(var(--primary-color-light), 1);
-}
-
-.dark .article-content .content p {
-    /* color: rgba(var(--primary-color-800), 1); */
-}
-
-/* #### MEDIA QUERIES #### */
+/********************************************************/
+/******************** MEDIA QUERIES ********************/
+/******************************************************/
 
 /* 2XL Breakpoints [2xl] - 1536px */
 @media only screen and (min-width: 1536px) {}
 
 /* XL Breakpoints [xl] - 1280px and 1439px (site normal size: 1440)  */
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-    .article-container {
+    .article-wrapper .article-container {
         width: 100%;
     }
 }
 
 /* Large Breakpoints [lg] - 1024px */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    .article-container {
+    .article-wrapper .article-container {
         width: 100%;
     }
 
-    .article-container .article-content {
+    .article-wrapper .article-container .article-content {
         width: 100%;
     }
 }

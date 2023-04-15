@@ -1,28 +1,28 @@
 footer {
     width: 100%;
     padding: 1rem 0;
-    border-color: rgba(var(--primary-color-dark), .1);
-    border-top-width: 1px;
+    border-top: 1px solid rgba(var(--QxSlate-900), 0.1);
     p {
-        color: rgba(var(--primary-color-400), 1);
+        color: rgba(var(--QxSlate-400), 1);
+    }
+    .footer-links {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0 4rem 0 5rem;
     }
 }
 
-.footer-links {
-    font-weight: 300;
-    font-style: italic;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 0 4rem 0 5rem;
-}
+/********************************************************/
+/********************** DARK THEME *********************/
+/******************************************************/
 
-/* ## Dark Mode ## */
-.dark {
+[data-mui-color-scheme="dark"] {
     footer {
-        background-color: transparent;
-        border-color: rgba(var(--primary-color-300), 0.6);
+        border-top: 1px solid rgba(var(--QxSlate-50), 0.06);
         p {
-            color: rgba(var(--primary-color-500), 1);
+            color: rgba(var(--QxSlate-500), 1);
         }
     }
 }

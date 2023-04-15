@@ -1,8 +1,10 @@
+import { Box } from "@mui/material"
+
 const MyReactPresentation = () => {
   return (
-    <div className="content">
+    <Box component="main" className="content">
       MyReactPresentation
-    </div>
+    </Box>
   )
 }
 

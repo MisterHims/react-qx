@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Header from "../layouts/headers/Header";
-import { HomeContent } from "../layouts/contents/Content";
+import { FullContent } from "../layouts/contents/Content";
 import Footer from "../layouts/footers/Footer";
 
 // Import Animated Background
@@ -14,12 +14,12 @@ type Props = {
   children: ReactNode;
 };
 
-const HomeTemplate = ({ children }: Props) => {
+const FullTemplate = ({ children }: Props) => {
   return (
-  <div className="home-wrapper">
-    <Header template="home" showNotificationBar={false} />
-    <div className="home-container">
-      <HomeContent>{children}</HomeContent>
+  <div className="full-wrapper">
+    <Header template="full" showNotificationBar={false} />
+    <div className="full-container">
+      <FullContent>{children}</FullContent>
       <Footer />
     </div>
     <ParticlesBackground />
@@ -27,4 +27,4 @@ const HomeTemplate = ({ children }: Props) => {
   );
 };
 
-export { HomeTemplate };
+export { FullTemplate };

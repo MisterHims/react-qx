@@ -8,27 +8,15 @@ de marges et de rembourrages. */
   z-index: 20;
 }
 
-#root {
-  width: 100%;
-}
-
 body {
   min-height: 100%;
-  background-color: rgba(var(--primary-color-light), 1);
+  background-color: var(--Qx-palette-background-default);
 
-  .App {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  #root {
+    width: 100%;
+
+    .App {
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
   }
-
-}
-
-/* ## Dark Mode ## */
-
-.dark {
-  color-scheme: dark;
-}
-
-.dark body {
-  color: rgba(var(--primary-color-700), 1);
-  background-color: rgba(var(--primary-color-dark), 1);
 }

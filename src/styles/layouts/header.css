@@ -4,7 +4,7 @@ header {
 
   /* Header Wrapper | OneViewTemplate > Home */
   .header-wrapper {
-    &.template-home {
+    &.template-full {
 			width: 100%;
     	border: none;
 			.header-container {
@@ -19,9 +19,11 @@ header {
 			border-bottom: 1px solid rgba(var(--QxSlate-900), 0.1);
 			.header-container {
 				max-width: 90rem;
-				padding: 1rem 2rem;
 				margin-left: auto;
 				margin-right: auto;
+        .header-content {
+          padding: 1rem 2rem;
+        }
 			}
 		}
 	}
@@ -44,13 +46,14 @@ header {
 
       /* Header Content > Logotype */
       .myreact-logotype {
+        display: inline-flex;
         flex: none;
         margin-right: 0.75rem;
         overflow: hidden;
 
         svg {
           width: auto;
-          height: 1.5rem;
+          height: 1.25rem;
           path.icon {fill: rgba(var(--QxBlue-500), 1);}
           path.text {fill: rgba(var(--QxSlate-950), 1);}
         }
@@ -58,7 +61,7 @@ header {
 
       /* Header Content > Bar Notification */
       .header-bar-notification {
-        display: flex;
+        display: inline-flex;
         color: rgba(var(--QxBlue-600), 1);
         line-height: 1.25rem;
         font-weight: 500;
@@ -96,7 +99,7 @@ header {
       }
       /* Header Content > Quick Access */
       .header-quick-access {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         margin-left: auto;
         position: relative;
@@ -109,6 +112,7 @@ header {
             display: flex;
             margin: 0;
             li {
+              display: inline-flex;
               list-style: none;
               a {
                 color: rgba(var(--QxSlate-700), 1);
@@ -117,6 +121,7 @@ header {
                 line-height: 1.5rem;
 								&:hover {
                 	color: rgba(var(--QxBlue-500));
+                  text-decoration: none;
               	}
               }
             }
@@ -128,7 +133,7 @@ header {
 
         /* Quick Access > Header Tools */
         .header-tools {
-          display: flex;
+          display: inline-flex;
           align-items: center;
           padding-left: 1.5rem;
           margin-left: 1.5rem;
@@ -143,8 +148,8 @@ header {
             svg {
               display: inline-block;
               color: rgba(var(--QxSlate-400), 1);
-              width: 1.4rem;
-              height: 1.4rem;
+              width: 1.25rem;
+              height: 1.25rem;
             }
           }
           a.github-button:hover svg {
@@ -159,8 +164,8 @@ header {
 
             svg {
               display: inline-block;
-              width: 1.5rem;
-              height: 1.5rem;
+              width: 1.25rem;
+              height: 1.25rem;
             }
             &:hover {
               color: rgba(var(--QxSlate-500), 1);
@@ -205,7 +210,7 @@ header {
 /********************************************************/
 /********************** DARK THEME *********************/
 /******************************************************/
-.dark {
+[data-mui-color-scheme="dark"] {
 
 	/* Header Wrapper | ArticlesTemplate > Base */
   .header-wrapper.template-article {
@@ -219,8 +224,11 @@ header {
     /* Header Wrapper > Header Content */
     .header-content {
       /* Header Content > MyReact Logotype */
-      .myreact-logotype svg path.text {
-        fill: rgba(var(--QxNeutral-0), 1);
+      .myreact-logotype {
+        svg {
+          path.icon {fill: rgba(var(--QxBlue-400), 1);}
+          path.text {fill: rgba(var(--QxNeutral-0), 1);}
+        }
       }
 
       /* Header Content > Header Bar Notification */
@@ -302,7 +310,7 @@ header {
 
 /* Small Breakpoints [sm] - 0px > 767px */
 @media only screen /* and (min-width: 640px) */ and (max-width: 767px) {
-  header .header-wrapper.template-home .header-container {
+  header .header-wrapper.template-full .header-container {
     padding: 1rem 1rem 0 1rem;
   }
   header .header-container .header-content .header-quick-access .header-links {

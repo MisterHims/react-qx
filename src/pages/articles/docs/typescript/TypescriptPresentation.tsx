@@ -1,6 +1,8 @@
+import { Box } from "@mui/material"
+
 const TypescriptPresentation = () => {
   return (
-    <div className="content">TypescriptPresentation</div>
+    <Box component="main" className="content">TypescriptPresentation</Box>
   )
 }
 

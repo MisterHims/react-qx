@@ -7,7 +7,7 @@ import HeaderTools from "./sub-headers/HeaderTools";
 import "../../../../build/styles/layouts/header.css";
 
 interface HeaderProps {
-  template: "home" | "article";
+  template: "full" | "article";
   showNotificationBar: boolean;
 }
 

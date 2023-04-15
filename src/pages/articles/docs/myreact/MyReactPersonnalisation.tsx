@@ -1,9 +1,8 @@
-import { Typography } from "@mui/material"
-import { List, ListItem, ListItemText } from '@mui/material';
+import { Box, Typography } from "@mui/material"
 
 const MyReactPersonnalisation = () => {
   return (
-    <div className="content">
+    <Box component="main" className="content">
         <Typography variant="h2">Personnalisation des styles</Typography>
         <Typography variant="body1">
             Il existe de nombreuses façons de personnaliser une application React avec MUI et les feuilles de styles PostCSS :
@@ -18,7 +17,7 @@ const MyReactPersonnalisation = () => {
             Parmi ces quatre différentes façons, nous avons fait le choix d'utiliser une alternative hybride, c'est à dire utiliser le theme de MUI pour les Unstyled Components de base fournis par  MUI et l'utilisation des feuilles CSS pour la stylisation de plus grand components tels que les layouts qui regroupent headers et footers par exemple.<br />
             L'utilisation du thème MUI pour les composants de base fournis par MUI permet de maintenir une cohérence dans l'apparence des composants et facilite leur personnalisation. D'autre part, l'utilisation de feuilles de styles CSS pour les composants personnalisés permet de bénéficier des avantages de la cascade CSS et de la réutilisation de styles, tout en gardant la souplesse et la flexibilité offertes par CSS.
         </Typography>
-    </div>
+    </Box>
   )
 }
 
