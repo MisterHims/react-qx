@@ -7,9 +7,9 @@ const Page404Error = () => {
 		navigate(-1);
 	}
   return (
-    <div className='content'>
-      <Typography variant='h1' color="error">404</Typography>
-      <Typography variant='h2' color="error"> Page non trouvée </Typography>
+    <div className='content errorpage-content'>
+      <Typography className="error-code" variant='h1' color="error">404</Typography>
+      <Typography className="error-text" variant='h2' color="error"> Page non trouvée </Typography>
       <Typography>Désolé, nous n'avons pas trouvé la page que vous cherchiez.</Typography>
       <Button sx={{ marginRight: '0.75rem' }} variant="outlined" component={Link} to="/" color="primary" size="large">
         Revenir à la page d'accueil

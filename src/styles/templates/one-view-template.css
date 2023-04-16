@@ -4,7 +4,7 @@ du component OneViewTemplates.tsx qui est composé de :
    - HomeTemplate
  */
 
-/* ### FULL PAGE ### */
+/* ### DEFAULT FULL PAGE ### */
 
 .full-container {
   width: 100%;
@@ -22,21 +22,44 @@ du component OneViewTemplates.tsx qui est composé de :
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    width: 64rem;
+    width: 58rem;
     max-width: 71.25rem;
     .content {
       margin: 2rem 0;
-      img {
-        max-width: 350px;
-      }
-      h1 {
-        font-weight: 800;
-        letter-spacing: -0.025em;
-      }
       p {
         font-size: 1.125rem;
         line-height: 1.75rem;
         margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+/* ### HOME PAGE ### */
+
+.full-container {
+  .full-content {
+    .homepage-content {
+      h1.welcoming-message {
+        font-size: 4rem;
+        letter-spacing: -0.025em;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+/* ### ERROR PAGE ### */
+
+.full-container {
+  .full-content {
+    .errorpage-content {
+      h1.error-code {
+        font-size: 8rem;
+        margin-bottom: 0;
+      }
+      h2.error-text {
+        margin-bottom: 1.5rem;
       }
     }
   }

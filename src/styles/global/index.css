@@ -6,29 +6,3 @@ de marges et de rembourrages. */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-  margin: 0;
-}
-
-h1.QxTypography-root, h2.QxTypography-root, h3.QxTypography-root, h4.QxTypography-root, h5.QxTypography-root, h6.QxTypography-root, p.QxTypography-root {
-  margin-bottom: 0.35em;
-}
-
-
-
-h1 {
-  color: var(--Qx-palette-neutral-main);
-}
-
-p {
-  color: var(--Qx-palette-text-primary);
-}
-
-a {
-  color: var(--Qx-palette-text-primary);
-  &:hover {text-decoration: underline;}
-}
-
-a.QxButtonBase-root {
-  margin-top: 1rem;
-}

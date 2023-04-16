@@ -33,7 +33,7 @@ yarn create vite
 
 Choose the project name then React - Typescript
 
-### Installation
+## Installation
 
 Once the installation is complete, we must now go to the folder of our project:
 
@@ -56,73 +56,11 @@ yarn add -D postcss postcss-import postcss-cli postcss-preset-env postcss-watch-
 
 It's done.
 
-### PostCSS and TailwindCSS initialization
+## Structure rearrangement
 
-Create a file named `postcss.config.cjs` at the root of our project then add the following parameters:
+For more clarity, our project has been rearranged using separation between main files, styles and components.
 
-```cjs
-module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ],
-};
-```
-
-Now we can initialize our TailwindCSS with our project:
-
-```cli
-npx tailwindcss init
-```
-
-If during this process the file named `tailwind.config.cjs` has not been added, then create this new file at the project root and add the following parameters:
-
-```cjs
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-Then temporarily add the Tailwind directives to our `index.css`:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-In order to check the proper functioning of our CSS preprocessor and Tailwind, we can add the following HTML code to our `App.tsx`:
-
-```html
-  <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-```
-
-We would normally notice a bold, underlined font.
-
-### Structure rearrangement
-
-For more clarity in our project, it's important to restructure it according to our needs:
-
-* Create a folder named 'styles' inside the 'src' folder and move all our css files (index.css and app.css)
-
-* Update all of our relative links:
-  * main.tsx: `import '../src/styles/index.css`
-  * App.tsx: `import '../src/styles/app.css`
-
-* Rename our capitalized files:
-  * App.css into "app.css"
-  * main.tsx into "Main.tsx"
-
-## Our final structure
+### Our final structure
 
 * The "src/assets" directory for images and other static files  to keep these assets separate from the main source code of the application.
 
@@ -140,7 +78,9 @@ For more clarity in our project, it's important to restructure it according to o
 
 Ultimately, the structure of a React project may vary depending on each developer's preferences and needs, but the one we presented seems to be well thought out and easy to maintain.
 
-## PostCSS Initialization
+## PostCSS and its plugins
+
+### PostCSS Initialization
 
 After setting up our desired structure, it's necessary to correctly initialize PostCSS in order to ask it to compile each of our style sheets in their user version.
 
@@ -185,12 +125,16 @@ But we don't need to build:css, we need watch:css so we can just add theses `wat
 
 ```json
 "scripts": {
+    "build:css": "concurrently \"yarn run build:css:*\"",
+    "watch:css": "concurrently \"yarn run watch:css:*\"",
     "build:css:index": "postcss src/styles/global/index.css --dir build/styles/global",
     "watch:css:index": "postcss src/styles/global/index.css --dir build/styles/global --watch",
     "build:css:app": "postcss src/styles/global/app.css --dir build/styles/global",
     "watch:css:app": "postcss src/styles/global/app.css --dir build/styles/global --watch",
     "build:css:colors": "postcss src/styles/global/colors.css --dir build/styles/global",
     "watch:css:colors": "postcss src/styles/global/colors.css --dir build/styles/global --watch",
+    "build:css:global": "postcss src/styles/global/global.css --dir build/styles/global",
+    "watch:css:global": "postcss src/styles/global/global.css --dir build/styles/global --watch",
     "build:css:articles-template": "postcss src/styles/templates/articles-template.css --dir build/styles/templates",
     "watch:css:articles-template": "postcss src/styles/templates/articles-template.css --dir build/styles/templates --watch",
     "build:css:one-view-template": "postcss src/styles/templates/one-view-template.css --dir build/styles/templates",
@@ -204,9 +148,9 @@ But we don't need to build:css, we need watch:css so we can just add theses `wat
 }
 ```
 
-It's done! We have initialized PostCSS.
+Now, if we need to view the css changes live, we just have to do the command "yarn run watch:css" and in this way the terminal will serve as a checkpoint of the new process which allows us to continuously check the different style changes applied to our project.
 
-## PostCSS Plugins
+If we come to close the terminal, then the process will also end.
 
 ### CSSNano
 
@@ -221,31 +165,11 @@ module.exports = {
   plugins: [
     require('cssnano')({ preset: 'default', }),
     require('autoprefixer'),
-    require('tailwindcss')
   ],
 };
 ```
 
 Note: If we do not notice the changes immediately, then we must use the watch:css command as seen previously.
-
-Warning: in order to allow faster rendering for the user when using TailwindCSS with PostCSS and NanoCSS, it's recommended to move the preprocessor directives of Tailwind CSS contained in index.css (`@tailwind base; @tailwind components; @tailwind utilities ;`) in a new file named "_tailwind.css" which will then be compiled by NanoCSS, our main preprocessor.
-
-Once these fixes are made, we can then add the following two lines to our package.json scripts:
-
-```json
-module.exports = {
-  plugins: [
-    "build:css:tailwindcss": "postcss postcss src/styles/components/_tailwind.css -o build/styles/components/tailwind.min.css",
-    "watch:css:tailwindcss": "postcss src/styles/components/_tailwind.css -o build/styles/components/tailwind.min.css -w",
-  ],
-};
-```
-
-Then, we just need to import our tailwind.min.css into our index.css file with:
-
-```css
-@import "../../../build/styles/components/tailwind.min.css";
-```
 
 ### Preset ENV
 
@@ -260,7 +184,6 @@ module.exports = {
     require('cssnano')({ preset: 'default', }),
     require('postcss-nested'),
     require('autoprefixer'),
-    require('tailwindcss')('./tailwind.config.cjs'),
     require('postcss-preset-env')({
       features: {
         'nesting-rules': false
@@ -275,3 +198,13 @@ Note: If the syntax of our `postcss.config.cjs` file does not use modern syntax 
 For using the Syntax highlighting for our css files, we can use the PostCSS Language VSCode plugin then install it this way: <https://github.com/MhMadHamster/vscode-postcss-language/blob/master/README.md>
 
 We can now use the watch:css command to render our stylesheets in real time.
+
+## Documentation
+
+### MUI Initialization
+
+This project was built for optimal use with MUI (excluding @mui/joy). The initialized MUI theme is fully compatible with the colors-scheme mode switch (light/dark) added in the header. For a good synchronization of MUI with the rest of the project, CSS variables are common to the whole project are used the theme and in all the rest of the project. In this way, if one of these variables were to be modified, then it will be passed on to the whole project.
+
+## Using MUI Components
+
+Good practice is not to use a MUI component if we are not going to use its features. Thus, if we come to set up a simple bulleted list, we should not use the `<List><ListItem>` component but favor the HTML `<ul><li>` tags.

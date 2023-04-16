@@ -1,12 +1,26 @@
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  ThemeProvider,
-  experimental_extendTheme as extendTheme,
-} from "@mui/material/styles";
+import { Experimental_CssVarsProvider as CssVarsProvider, experimental_extendTheme as extendTheme, } from "@mui/material/styles";
+import { Link as RouterLink } from "react-router-dom";
+
 import { QxBlue, QxPink, QxSlate, QxGray, QxNeutral } from "./colors/QxPalette";
 
-// View the full default theme here: https://mui.com/material-ui/customization/default-theme/
+declare module "@mui/material/styles" {
+  interface PaletteOptions {
+    QxCustom: {
+      main: string,
+      light: string,
+      dark: string,
+    };
+  }
+  interface Palette {
+    QxCustom: {
+      main: string,
+      light: string,
+      dark: string,
+    };
+  }
+}
 
+// View the full default theme here: https://mui.com/material-ui/customization/default-theme/
 const theme = extendTheme({
   cssVarPrefix: "Qx",
   colorSchemes: {
@@ -20,8 +34,8 @@ const theme = extendTheme({
 
         primary: {
           main: QxBlue[500],
-          light: QxBlue[300],
-          dark: QxBlue[700],
+          light: QxBlue[400],
+          dark: QxBlue[600],
           contrastText: QxNeutral[0],
         },
 
@@ -32,12 +46,18 @@ const theme = extendTheme({
           contrastText: QxNeutral[0],
         },
 
-        // Custom token (key-value pairs) : Need to define it to index.css for working
         neutral: {
-          main: QxSlate[800],
+          main: QxSlate[800], // utilisée pour les titres
           light: QxSlate[300],
-          dark: QxSlate[950],
+          dark: QxSlate[800],
           contrastText: QxNeutral[0],
+        },
+
+        // Custom token (key-value pairs) : Need to define it to index.css for working
+        QxCustom: {
+          main: QxSlate[200],
+          light: QxSlate[200],
+          dark: QxSlate[200],
         },
 
         /*
@@ -117,21 +137,34 @@ const theme = extendTheme({
       palette: {
         primary: {
           main: QxBlue[600],
-          light: QxBlue[300],
-          dark: QxBlue[500],
+          light: QxBlue[500],
+          dark: QxBlue[700],
           contrastText: QxNeutral[0],
         },
+
         secondary: {
           main: QxPink[400],
         },
+
         neutral: {
-          main: QxSlate[200],
+          main: QxSlate[300], // utilisée pour les titres
+          light: QxSlate[300],
+          dark: QxSlate[500],
           contrastText: QxNeutral[0],
         },
+
+        // Custom token (key-value pairs) : Need to define it to index.css for working
+        QxCustom: {
+          main: QxSlate[200],
+          light: QxSlate[200],
+          dark: QxSlate[200],
+        },
+
         background: {
           default: QxSlate[900],
           paper: QxSlate[800],
         },
+
         text: {
           primary: QxSlate[400],
           secondary: QxSlate[500],
@@ -141,12 +174,12 @@ const theme = extendTheme({
   },
   typography: {
     fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
-    h1: { fontSize: "6rem" },
-    h2: { fontSize: "3.75rem" },
-    h3: { fontSize: "3rem" },
-    h4: { fontSize: "2.125rem" },
-    h5: { fontSize: "1.5rem" },
-    h6: { fontSize: "1.25rem" },
+    h1: { fontSize: "3rem", fontWeight: "900" },
+    h2: { fontSize: "2.75rem", fontWeight: "800" },
+    h3: { fontSize: "2rem", fontWeight: "700" },
+    h4: { fontSize: "1.75rem", fontWeight: "600" },
+    h5: { fontSize: "1.5rem", fontWeight: "500" },
+    h6: { fontSize: "1.25rem", fontWeight: "400" },
     subtitle1: { fontSize: "1rem" },
     subtitle2: { fontSize: "0.875rem" },
     body1: { fontSize: "1rem" },
@@ -156,11 +189,35 @@ const theme = extendTheme({
     overline: {},
   },
   components: {
-    // Si nous venons à utiliser MuiAppBar, elle deviendra alors transparente
-    MuiAppBar: {
+    // Permet de définir une marge utilisée par défaut pour nos <Typography>
+    // ainsi qu'une couleur pour chacune de nos variantes
+    MuiTypography: {
+      styleOverrides: {
+        root: () => ({ marginBottom: "0.35rem" }),
+        h1: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        h2: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        h3: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        h4: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        h5: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        h6: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        subtitle1: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        subtitle2: ({ theme }) => ({ color: theme.palette.neutral.main }),
+        body1: ({ theme }) => ({ color: theme.palette.text.primary }),
+        body2: ({ theme }) => ({ color: theme.palette.text.primary }),
+      },
+    },
+    // Changement de la couleur utilisée par défaut pour le survol des boutons en mode dark
+    // theme.palette.primary.dark remplacée par theme.palette.primary.light
+    MuiButton: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: "transparent",
+          marginTop: "1rem",
+          "&:hover": {
+            backgroundColor:
+              theme.palette.mode === "dark"
+                ? theme.palette.primary.light
+                : theme.palette.primary.dark,
+          },
         }),
       },
     },

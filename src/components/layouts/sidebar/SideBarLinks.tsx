@@ -1,35 +1,38 @@
+import { List, ListItem, ListItemText, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom"
 
 const SideBarDocsLinks = () => {
   return (
     <ul className="sidebar-links">
       <li>
-        <h5>My React App</h5>
-        <ul>
-          <li>
+        <Typography variant="h5">My React App</Typography>
+
+        <List>
+          <ListItem>
             <NavLink to="/docs/myreact/presentation">
               Présentation
             </NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink to="/docs/myreact/installation">
               Installation
             </NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink to="/docs/myreact/structure">
               Structure
             </NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <NavLink to="/docs/myreact/personnalisation">
               Personnalisation
             </NavLink>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </li>
+
       <li>
-        <h5>Branding</h5>
+        <Typography variant="h5">Branding</Typography>
         <ul>
           <li>
             <NavLink to="/docs/branding/colors">
@@ -39,7 +42,7 @@ const SideBarDocsLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>TypeScript</h5>
+        <Typography variant="h5">TypeScript</Typography>
         <ul>
           <li>
             <NavLink to="/docs/typescript/presentation">
@@ -49,7 +52,7 @@ const SideBarDocsLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>PostCSS</h5>
+        <Typography variant="h5">PostCSS</Typography>
         <ul>
           <li>
             <NavLink to="/docs/postcss/presentation">
@@ -64,7 +67,7 @@ const SideBarDocsLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>Material-UI</h5>
+        <Typography variant="h5">Material-UI</Typography>
         <ul>
           <li>
             <NavLink to="/docs/material-ui/presentation">
@@ -79,7 +82,7 @@ const SideBarDocsLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>TailwindCSS</h5>
+        <Typography variant="h5">TailwindCSS</Typography>
         <ul>
           <li>
             <NavLink to="/docs/tailwindcss/presentation">
@@ -89,7 +92,7 @@ const SideBarDocsLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>Flowbite</h5>
+        <Typography variant="h5">Flowbite</Typography>
         <ul>
           <li>
             <NavLink to="/docs/flowbite/presentation">
@@ -106,7 +109,7 @@ const SideBarExercicesLinks = () => {
   return (
     <ul className="sidebar-links">
       <li>
-        <h5>TypeScript</h5>
+        <Typography variant="h5">TypeScript</Typography>
         <ul>
           <li>
             <NavLink to="/exercices/typescript/exercice-01">
@@ -116,7 +119,7 @@ const SideBarExercicesLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>PostCSS</h5>
+        <Typography variant="h5">PostCSS</Typography>
         <ul>
           <li>
             <NavLink to="/exercices/postcss/exercice-01">
@@ -126,7 +129,7 @@ const SideBarExercicesLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>Material-UI</h5>
+        <Typography variant="h5">Material-UI</Typography>
         <ul>
           <li>
             <NavLink to="/exercices/material-ui/exercice-01"> Exercice n°1 </NavLink>
@@ -140,7 +143,7 @@ const SideBarExercicesLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>TailwindCSS</h5>
+        <Typography variant="h5">TailwindCSS</Typography>
         <ul>
           <li>
             <NavLink to="/exercices/tailwindcss/exercice-01">
@@ -150,7 +153,7 @@ const SideBarExercicesLinks = () => {
         </ul>
       </li>
       <li>
-        <h5>Flowbite</h5>
+        <Typography variant="h5">Flowbite</Typography>
         <ul>
           <li>
             <NavLink to="/exercices/flowbite/exercice-01">
