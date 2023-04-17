@@ -26,7 +26,8 @@
     "watch:css:footer": "postcss src/styles/layouts/footer.css --dir build/styles/layouts --watch",
     "build:css:sidebar": "postcss src/styles/layouts/sidebar.css --dir build/styles/layouts",
     "watch:css:sidebar": "postcss src/styles/layouts/sidebar.css --dir build/styles/layouts --watch",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install": "yarn install"
   },
   "dependencies": {
     "@mui/base": "^5.0.0-alpha.124",
