@@ -13,7 +13,7 @@ interface HeaderProps {
 
 const Header = (props: HeaderProps) => {
   return (
-    <header>
+    <header id="header">
       <HeaderBackgroundClassic />
       <div className={`header-wrapper template-${props.template}`}>
         <div className="header-container">

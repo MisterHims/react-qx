@@ -18,14 +18,18 @@ du component ArticlesTemplates.tsx qui est composé de :
 		margin-right: auto;
 		padding: 0 2rem;
 		.article-content {
-			width: calc(100% - 20rem);
-			padding-left: 2rem;
+			padding: 0 2rem 0 21.5rem;
+			width: calc(90rem - 2rem - 21.5rem);
 			.content {
 				max-width: 71.25rem;
 				margin: 2rem 0;
-				img {
-					max-width: 350px;
+				/* Target all the default <a> like Link Component from react-router-dom */
+				a {
+					color: var(--Qx-palette-primary-main);
+					text-decoration: none;
+					&:hover {text-decoration: underline;}
 				}
+				img {max-width: 350px;}
 			}
 		}
 	} /* Fin | Article Container */

@@ -2,13 +2,14 @@
 
 ## Introduction
 
-React-TS is my personal React environment to work. It's bootstrapped with Vite and uses Typescript as a programming language.
+React-Qx is my personal React environment to work. It's bootstrapped with Vite and uses Typescript as a programming language.
 
 Here is the list of all the dependencies and frameworks used with this environment:
 
 * React
 * React-Dom
 * React-Router-Dom
+* React-Window (react-window and @types/react-window)
 * Concurrently (concurrently)
 * clsx (clsx)
 * PostCSS (postccs and postcss-cli) :
@@ -44,13 +45,13 @@ cd react-ts
 We can now install all our libraries:
 
 ```cli
-yarn add react react-dom react-router-dom react-particles @mui/material clsx @mui/core @mui/base @mui/styles @mui/joy tsparticles
+yarn add react react-dom react-router-dom react-window react-particles @mui/material clsx @mui/core @mui/base @mui/styles @mui/joy tsparticles
 ```
 
 And in dev mode:
 
 ```cli
-yarn add -D postcss postcss-import postcss-cli postcss-preset-env postcss-watch-folder cssnano autoprefixer @emotion/react @emotion/styled @types/react @types/react-dom @vitejs/plugin-react postcss-import postcss-nested postcss-utilities postcss-mixins postcss-simple-vars
+yarn add -D @types/react-window postcss postcss-import postcss-cli postcss-preset-env postcss-watch-folder cssnano autoprefixer @emotion/react @emotion/styled @types/react @types/react-dom @vitejs/plugin-react postcss-import postcss-nested postcss-utilities postcss-mixins postcss-simple-vars
 
 ```
 
@@ -203,8 +204,8 @@ We can now use the watch:css command to render our stylesheets in real time.
 
 ### MUI Initialization
 
-This project was built for optimal use with MUI (excluding @mui/joy). The initialized MUI theme is fully compatible with the colors-scheme mode switch (light/dark) added in the header. For a good synchronization of MUI with the rest of the project, CSS variables are common to the whole project are used the theme and in all the rest of the project. In this way, if one of these variables were to be modified, then it will be passed on to the whole project.
+This project was built for optimal use with MUI (excluding @mui/joy). The initialized MUI theme is fully compatible with the colors-scheme mode switch (light/dark) added in the header. For a good synchronization of MUI with the rest of the project, CSS variables are common to the whole project are used in the theme and in all the rest of the project. In this way, if one of these variables were to be modified, then it will be passed on to the whole project.
 
 ## Using MUI Components
 
-Good practice is not to use a MUI component if we are not going to use its features. Thus, if we come to set up a simple bulleted list, we should not use the `<List><ListItem>` component but favor the HTML `<ul><li>` tags.
+Good practice is not to use a MUI component if we are not going to use its features. Thus, if we come to set up a simple bulleted list, we should not use the `<List> <ListItem>` component but favor the HTML `<ul> <li>` tags.

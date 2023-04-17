@@ -18,13 +18,13 @@ import { ExercicesTemplate } from "../components/templates/ArticlesTemplates";
 import ExercicesIndex from "../pages/articles/exercices/ExercicesIndex";
 
 // Import Exercices Files
-import FlowbiteExercice01 from "../pages/articles/exercices/flowbite/FlowbiteExercice01";
+import FlowbiteExercice01 from "../pages/articles/exercices/_flowbite/FlowbiteExercice01";
 import MaterialUIExercice01 from "../pages/articles/exercices/material-ui/MaterialUIExercice01";
 import MaterialUIExercice02 from "../pages/articles/exercices/material-ui/MaterialUIExercice02";
 import MaterialUIExercice03 from "../pages/articles/exercices/material-ui/MaterialUIExercice03";
 import PostCSSExercice01 from "../pages/articles/exercices/postcss/PostCSSExercice01";
-import TailwindCSSExercice01 from "../pages/articles/exercices/tailwindcss/TailwindCSSExercice01";
 import TypescriptExercice01 from "../pages/articles/exercices/typescript/TypescriptExercice01";
+import BaseStylization from "../pages/articles/exercices/html-dom/BaseStylization";
 
 /////////// DOCS PAGES \\\\\\\\\\\
 
@@ -36,7 +36,6 @@ import DocsIndex from "../pages/articles/docs/DocsIndex";
 
 // Import Docs Files
 import ColorsArticle from "../pages/articles/docs/branding/ColorsArticle";
-import FlowbiteDarkMode from "../pages/articles/docs/flowbite/FlowbiteDarkMode";
 import MyReactPresentation from "../pages/articles/docs/myreact/MyReactPresentation";
 import MyReactInstallation from "../pages/articles/docs/myreact/MyReactInstallation";
 import MyReactStructure from "../pages/articles/docs/myreact/MyReactStructure";
@@ -46,8 +45,6 @@ import PostCSSPresentation from "../pages/articles/docs/postcss/PostCSSPresentat
 import PostCSSUtilities from "../pages/articles/docs/postcss/PostCSSUtilities";
 import MaterialUIPresentation from "../pages/articles/docs/material-ui/MaterialUIPresentation";
 import MaterialUITypography from "../pages/articles/docs/material-ui/MaterialUITypography";
-import TailwindCSSPresentation from "../pages/articles/docs/tailwindcss/TailwindCSSPresentation";
-import FlowbitePresentation from "../pages/articles/docs/flowbite/FlowbitePresentation";
 
 const MainRoutes = () => {
   return (
@@ -59,12 +56,11 @@ const MainRoutes = () => {
       <Route path="/exercices/material-ui/exercice-02" element={<ExercicesTemplate><MaterialUIExercice02 /></ExercicesTemplate>}/>
       <Route path="/exercices/material-ui/exercice-03" element={<ExercicesTemplate><MaterialUIExercice03 /></ExercicesTemplate>}/>
       <Route path="/exercices/postcss/exercice-01" element={<ExercicesTemplate><PostCSSExercice01 /></ExercicesTemplate>}/>
-      <Route path="/exercices/tailwindcss/exercice-01" element={<ExercicesTemplate><TailwindCSSExercice01 /></ExercicesTemplate>}/>
       <Route path="/exercices/typescript/exercice-01" element={<ExercicesTemplate><TypescriptExercice01 /></ExercicesTemplate>}/>
+      <Route path="/exercices/html-dom/base-stylization" element={<ExercicesTemplate><BaseStylization /></ExercicesTemplate>}/>
       <Route path="/docs" element={<DocsTemplate><DocsIndex /></DocsTemplate>}/>
       <Route path="/docs/branding/colors" element={<DocsTemplate><ColorsArticle /></DocsTemplate>}/>
       <Route path="/docs/myreact/presentation" element={<DocsTemplate><MyReactPresentation /></DocsTemplate>}/>
-      <Route path="/docs/dark-mode-with-flowbite" element={<DocsTemplate><FlowbiteDarkMode /></DocsTemplate>}/>
       <Route path="/docs/myreact/installation" element={<DocsTemplate><MyReactInstallation /></DocsTemplate>}/>
       <Route path="/docs/myreact/structure" element={<DocsTemplate><MyReactStructure /></DocsTemplate>}/>
       <Route path="/docs/myreact/personnalisation" element={<DocsTemplate><MyReactPersonnalisation /></DocsTemplate>}/>
@@ -73,8 +69,6 @@ const MainRoutes = () => {
       <Route path="/docs/postcss/utilities" element={<DocsTemplate><PostCSSUtilities /></DocsTemplate>}/>
       <Route path="/docs/material-ui/presentation" element={<DocsTemplate><MaterialUIPresentation /></DocsTemplate>}/>
       <Route path="/docs/material-ui/typographie" element={<DocsTemplate><MaterialUITypography /></DocsTemplate>}/>
-      <Route path="/docs/tailwindcss/presentation" element={<DocsTemplate><TailwindCSSPresentation /></DocsTemplate>}/>
-      <Route path="/docs/flowbite/presentation" element={<DocsTemplate><FlowbitePresentation /></DocsTemplate>}/>
       <Route path="/*" element={<FullTemplate><Page404Error /></FullTemplate>} />
     </Routes>
   );

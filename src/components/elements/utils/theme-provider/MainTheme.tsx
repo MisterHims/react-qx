@@ -175,7 +175,7 @@ const theme = extendTheme({
   typography: {
     fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
     h1: { fontSize: "3rem", fontWeight: "900" },
-    h2: { fontSize: "2.75rem", fontWeight: "800" },
+    h2: { fontSize: "2.5rem", fontWeight: "800" },
     h3: { fontSize: "2rem", fontWeight: "700" },
     h4: { fontSize: "1.75rem", fontWeight: "600" },
     h5: { fontSize: "1.5rem", fontWeight: "500" },

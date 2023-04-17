@@ -1,12 +1,11 @@
 body {
   margin: 0;
   color: var(--Qx-palette-text-primary);
-  /* Target all the default <a> like Link Component from react-router-dom */
-  a {
-    color: var(--Qx-palette-primary-main);
-    text-decoration: none;
-    &:hover {text-decoration: underline;}
-  }
+}
+
+/* Change the default alignment of <ListItem> components */
+li.QxListItem-root {
+    align-items: flex-start;
 }
 
 button {
@@ -55,4 +54,12 @@ button, select {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+/********************************************************/
+/********************** DARK THEME *********************/
+/******************************************************/
+
+[data-mui-color-scheme="dark"] {
+    color-scheme: dark;
 }
