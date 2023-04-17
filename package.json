@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "start": "concurrently \"yarn\" \"yarn run build\" \"vite preview\"",
+    "build": "tsc ; vite build",
     "build:css": "concurrently \"yarn run build:css:*\"",
     "watch:css": "concurrently \"yarn run watch:css:*\"",
     "build:css:index": "postcss src/styles/global/index.css --dir build/styles/global",
