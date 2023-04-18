@@ -16,7 +16,6 @@ Here is the list of all the dependencies and frameworks used with this environme
 * React
 * React-Dom
 * React-Router-Dom
-* React-Helmet (react-helmet-async)
 * React-Window (react-window and @types/react-window)
 * Concurrently (concurrently)
 * CLSX (clsx)
@@ -59,14 +58,6 @@ The general structure has been designed in order to organize our project in an a
 * The "src/styles" directory contain all of our application's style files, including the main CSS file.
 
 ## Dependencies
-
-### React Helmet
-
-React Helmet allows dynamically modifying the head tags of the HTML document using React component props.
-
-This means we can control things like page title, metadata, and canonical link tags from your React component, rather than setting them statically in the HTML file.
-
-This is especially useful for search engine optimization (SEO) and accessibility, as it allows search engines and screen readers to get accurate information about the page.
 
 ### React Window
 
