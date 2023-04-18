@@ -1,6 +1,8 @@
+import { MetaData } from "../../../../components/elements/utils/seo/MetaData";
 import { Box, Typography } from '@mui/material'
 
 const PostCSSUtilities = () => {
+  MetaData("PostCSS Utilities - PostCSS - myReact", "Demo meta description");
   return (
     <Box component="main" className="content">
         <Typography variant='h2'>PostCSSUtilities</Typography>

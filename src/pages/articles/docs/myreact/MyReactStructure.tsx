@@ -1,7 +1,8 @@
-import { Box, Typography } from '@mui/material'
-import { List, ListItem, ListItemText } from '@mui/material';
+import { MetaData } from "../../../../components/elements/utils/seo/MetaData";
+import { Box, Typography } from "@mui/material";
 
 const MyReactStructure = () => {
+  MetaData("Structure - myReact", "Demo meta description");
   return (
     <Box component="main" className="content">
       <Typography variant="h1">Structure générale</Typography>
@@ -26,6 +27,6 @@ const MyReactStructure = () => {
       l'équipe de développement.
     </Box>
   );
-}
+};
 
-export default MyReactStructure
+export default MyReactStructure;

@@ -1,6 +1,8 @@
+import { MetaData } from "../../../../components/elements/utils/seo/MetaData";
 import { Box, Typography } from "@mui/material";
 
 const BaseStylization = () => {
+  MetaData("Base stylization - myReact", "Demo meta description");
   return (
     <Box component="main" className="content">
       <Typography variant="body1">
