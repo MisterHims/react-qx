@@ -7,7 +7,7 @@ import "../../../../build/styles/layouts/sidebar.css";
 const MainSideBarDocs = () => {
   return (
     <div className="sidebar">
-      <nav id="nav" className="sidebar-container">
+      <nav className="sidebar-container">
         <div className="sidebar-content">
           <SearchBar />
           <SidebarTopLinks />

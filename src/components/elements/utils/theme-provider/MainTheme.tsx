@@ -1,7 +1,7 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, experimental_extendTheme as extendTheme, } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
 
-import { QxBlue, QxPink, QxSlate, QxGray, QxNeutral } from "./colors/QxPalette";
+import { QxBlue, QxPink, QxSlate, QxGray, QxNeutral, QxRed } from "./colors/QxPalette";
 
 declare module "@mui/material/styles" {
   interface PaletteOptions {
@@ -60,14 +60,12 @@ const theme = extendTheme({
           dark: QxSlate[200],
         },
 
-        /*
         error: {
-          // main: default-value (#d32f2f),
-          // light: default-value (#ef5350),
-          // dark: default-value (#c62828),
-          // contrastText: default-value (#fff),
+          main: QxRed[600],
+          light: QxRed[400],
+          dark: QxRed[800],
+          contrastText: QxNeutral[0],
         },
-        */
 
         /*
         warning: {
@@ -217,6 +215,7 @@ const theme = extendTheme({
               theme.palette.mode === "dark"
                 ? theme.palette.primary.light
                 : theme.palette.primary.dark,
+            color: theme.palette.primary.contrastText,
           },
         }),
       },

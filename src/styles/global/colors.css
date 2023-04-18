@@ -56,7 +56,7 @@
     --QxGray-900: 17, 24, 39;
     --QxGray-950: 3, 7, 18;
 
-    /* Neutral - B&W and shades of grey */
+    /* QxNeutral - B&W and shades of grey */
 
     --QxNeutral-0: 255, 255, 255;
     --QxNeutral-50: 248, 248, 248;
@@ -79,6 +79,21 @@
     --QxNeutral-900: 20, 20, 20;
     --QxNeutral-950: 7, 7, 7;
     --QxNeutral-1000: 0, 0, 0;
+
+    /* QxRed */
+
+    --QxRed-50: 254, 242, 242;
+    --QxRed-100: 254, 226, 226;
+    --QxRed-200: 254, 202, 202;
+    --QxRed-300: 252, 165, 165;
+    --QxRed-400: 248, 113, 113;
+    --QxRed-500: 239, 68, 68;
+    --QxRed-600: 220, 38, 38;
+    --QxRed-700: 185, 28, 28;
+    --QxRed-800: 153, 27, 27;
+    --QxRed-900: 127, 29, 29;
+    --QxRed-950: 69, 10, 10;
+
 }
 
 /*

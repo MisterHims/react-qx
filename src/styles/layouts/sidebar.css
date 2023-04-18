@@ -60,6 +60,9 @@
         a {
           color: rgba(var(--QxSlate-700), 1);
           text-decoration: none;
+          &.active {
+            &:hover { color: currentColor }
+          }
           &:hover {
             color: rgba(var(--QxSlate-900), 1);
           }
@@ -176,6 +179,9 @@
           li {
             a {
               color: rgba(var(--QxSlate-400), 1);
+              &.active {
+                &:hover { color: currentColor; }
+              }
             }
           }
           &.sidebar-top-links {
@@ -201,10 +207,14 @@
           &.sidebar-links {
             li {
               a {
+                &:hover {
+                  color: rgba(var(--QxSlate-300), 1);
+                  border-color: rgba(var(--QxNeutral-600), 1);
+                }
                 &.active {
                   &:hover {
-                    color: rgba(var(--QxSlate-300), 1);
-                    border-color: rgba(var(--QxBlue-700), 1);
+                    color: rgba(var(--QxBlue-500), 1);
+                    border-color: rgba(var(--QxBlue-500), 1);
                   }
                 }
               }

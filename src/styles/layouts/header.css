@@ -164,12 +164,8 @@ header {
 
           /* Header Tools > Dark Mode Button */
           .QxButtonBase-root {
-            color: rgba(var(--QxSlate-500), 1);
             padding: 0;
             margin: 0;
-            &:hover {
-              color: rgba(var(--QxNeutral-0), 1);
-            }
           }
         }
       } /* Fin | Quick Access */

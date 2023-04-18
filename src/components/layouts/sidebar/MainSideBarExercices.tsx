@@ -6,8 +6,8 @@ import "../../../../build/styles/layouts/sidebar.css";
 
 const MainSidebarExercices = () => {
   return (
-    <div className="sidebar flex">
-      <nav id="nav" className="sidebar-container lg:text-sm lg:leading-6">
+    <div className="sidebar">
+      <nav className="sidebar-container lg:text-sm lg:leading-6">
         <div className="sidebar-content">
           <SearchBar />
           <SidebarTopLinks />

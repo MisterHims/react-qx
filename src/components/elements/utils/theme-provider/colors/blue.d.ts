@@ -1,3 +1,10 @@
+
+/*
+
+## Il est inutile de déclarer le code couleur dans le module theme mui
+## si nous utilisons un code couleur hexadecimal dans MainTheme.tsx
+
+
 declare const blue: {
     50: '#f0f9ff', // rgb(240, 249, 255)
     100: '#e0f2fe', // rgb(224, 242, 253)
@@ -13,3 +20,4 @@ declare const blue: {
 };
 
 export default blue;
+*/
