@@ -1,5 +1,12 @@
 # Our React Project
 
+## Installation
+
+1. Create a new folder ready to receive the project
+2. Import git repo inside for example with VSCode
+3. Change directory to go to folder named "react-qx"
+4. Run the following command in your terminal: `yarn run start`
+
 ## Introduction
 
 React-Qx is my personal React environment to work. It's bootstrapped with Vite and uses Typescript as a programming language.
@@ -23,13 +30,6 @@ Here is the list of all the dependencies and frameworks used with this environme
 * Autoprefixer
 * Material-UI (@mui/core, @mui/material, @mui/base, @mui/styles and @mui/joy)
 * Emotion (@emotion/react and @emotion/styled)
-
-### Installation
-
-1. Create a new folder ready to receive the project
-2. Import git repo inside for example with VSCode
-3. Change directory to go to folder named "react-qx"
-4. Run the following command in your terminal: `yarn run start`
 
 ### Development mode
 
